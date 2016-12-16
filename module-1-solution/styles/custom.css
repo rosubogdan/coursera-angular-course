@@ -1,0 +1,20 @@
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.error-border {
+  border-color: red;
+}
+
+.success-border {
+  border-color: green;
+}
+
+.normal-border {
+  border-color: grey;
+}
