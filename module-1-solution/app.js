@@ -22,7 +22,7 @@
 
       //remove empty array items
       angular.forEach(dishes, function(item, index) {
-        if(item === " ") {
+        if(item === " " || angular.isNumber(parseInt(item))) {
           dishes.splice(index, 1);
         }
       });
