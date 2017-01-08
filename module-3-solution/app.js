@@ -38,7 +38,7 @@
 				// process result and only keep items that match
 				var foundItems = [];
 				angular.forEach(result.data.menu_items, function (item) {
-					if (item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) != -1) {
+					if (item.description.toLowerCase().indexOf(searchTerm.toLowerCase()) != -1) {
 						foundItems.push(item);
 					}
 				});
