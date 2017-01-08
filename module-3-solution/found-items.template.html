@@ -1,0 +1,23 @@
+<div class="row" ng-if="foundItems.length > 0">
+  <h3>Menu items list</h3>
+ <table class="table table-striped">
+   <thead>
+    <tr>
+      <td>Id</td>
+      <td>Short name</td>
+      <td>Name</td>
+      <td>Action</td>
+    </tr>
+   </thead>
+   <tbody>
+   <tr ng-repeat="item in foundItems">
+     <td>{{$index+1}}</td>
+     <td>( {{ item.short_name }} )</td>
+     <td>{{item.name}}</td>
+     <td>
+       <button class="btn btn-primary btn-sm" ng-click="removeItem({index: $index})"> Don't want this one!</button>
+     </td>
+   </tr>
+   </tbody>
+ </table>
+</div>
