@@ -1,1 +1,8 @@
-<h1>categories component</h1>
+<h2 class="text-center">Categories</h2>
+
+{{catList}}
+<ul class="list-group" ng-repeat="cat in catList">
+	<li class="list-item">
+		{{cat.name}}
+	</li>
+</ul>

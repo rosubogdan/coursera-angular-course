@@ -5,7 +5,7 @@
 	var categoriesComponent = {
 		templateUrl: './src/components/categories.template.html',
 		bindings: {
-			categories: '<'
+			catList: '<'
 		}
 	};
 	

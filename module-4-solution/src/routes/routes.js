@@ -19,10 +19,31 @@
 				templateUrl: 'src/pages/homepage.html'
 			})
 			
-			// Premade list page
 			.state('categories', {
 				url: '/categories',
-				templateUrl: 'src/pages/categories.html'
+				templateUrl: 'src/pages/categories.html',
+				controller: 'CategoriesController as catCtrl',
+				resolve: {
+					categoriesList: ['MenuDataService', function(MenuDataService) {
+						return MenuDataService.getAllCategories().then(function (res) {
+							return res;
+						});
+					}]
+				}
+			})
+			
+			.state('items', {
+				url: '/categories/{shortName}',
+				templateUrl: 'src/pages/items.html',
+				controller: 'ItemsController as itCtrl',
+				resolve: {
+					items: ['$stateParams', 'MenuDataService', function($stateParams,MenuDataService) {
+						return MenuDataService.getItemsForCategory($stateParams.shortName).then(function (res) {
+							console.log('aaaa ', res);
+							return res;
+						});
+					}]
+				}
 			});
 	}
 	

@@ -19,7 +19,7 @@
 		};
 	}
 	
-	MenuDataService.$inject = ['$http', 'ApiBase'];
+	MenuDataService.$inject = ['$http', 'ApiBaseUrl'];
 	angular
 		.module('data')
 		.service('MenuDataService', MenuDataService);
