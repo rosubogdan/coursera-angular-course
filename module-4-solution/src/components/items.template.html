@@ -1,1 +1,9 @@
-<h2 class="text-center">Category items</h2>
+<h2 class="text-center">Menu Items</h2>
+<ul class="list-group">
+	<li class="list-group-item"  ng-repeat="item in $ctrl.list">
+	{{$index + 1}} -  {{item.name}} -----   {{item.price_large}}
+  <br>
+  {{item.description}}
+  <small></small>
+	</li>
+</ul>
