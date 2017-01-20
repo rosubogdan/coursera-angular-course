@@ -24,7 +24,6 @@ function SignUpController(MenuService, UserService) {
     }
 
     self.saveUser = function() {
-      console.log('user ', self.user);
       UserService.saveUser(self.user);
       self.success = true;
     };
