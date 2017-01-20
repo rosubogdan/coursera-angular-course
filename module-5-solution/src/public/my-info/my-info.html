@@ -1,7 +1,7 @@
 <div class="container">
 
   <h2 id="menu-categories-title" class="text-center">My details</h2>
-
+<br><br>
   <div ng-show="info.user === null">
     <div class="row">
       <h3 class="text-center">
@@ -13,7 +13,7 @@
 
 
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
       <div class="form-group">
         <label for="first_name" class="cols-sm-2 control-label">First Name: {{info.user.first_name}} </label>
       </div>
@@ -31,8 +31,26 @@
       </div>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-18">
       <menu-item menu-item="info.user.favorite_dish">
+
+        <div class="menu-item-tile">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="menu-item-photo">
+                <div>{{info.user.favorite_dish.short_name}}</div>
+                <img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{info.user.favorite_dish.short_name}}.jpg" alt="{{info.user.favorite_dish.name}}">
+              </div>
+              <div class="menu-item-price">{{info.user.favorite_dish.price_small | currency}}<span> {{info.user.favorite_dish.small_portion_name}}</span> {{info.user.favorite_dish.price_large | currency}} <span>{{info.user.favorite_dish.large_portion_name}}</span></div>
+            </div>
+            <div class="menu-item-description col-sm-6">
+              <h3 class="menu-item-title">{{info.user.favorite_dish.name}}</h3>
+              <p class="menu-item-details">{{info.user.favorite_dish.description}}</p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
     </div>
 
     </div>
