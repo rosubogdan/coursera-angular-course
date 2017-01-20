@@ -111,6 +111,14 @@ h3.menu-item-title {
   font-size: .9em;
   font-style: italic;
 }
+
+.login-button {
+  background-color: #f6b319;
+}
+
+.login-button:hover {
+  background-color: #ddd;
+}
 /* END SINGLE CATEGORY PAGE */
 
 

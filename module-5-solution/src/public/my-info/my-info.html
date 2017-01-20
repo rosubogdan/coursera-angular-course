@@ -1,0 +1,40 @@
+<div class="container">
+
+  <h2 id="menu-categories-title" class="text-center">My details</h2>
+
+  <div ng-show="info.user === null">
+    <div class="row">
+      <h3 class="text-center">
+      <span>Not Signed Up Yet. </span> <a ui-sref="public.signup" class=" btn btn-lg login-button"> Sign up Now!</a>
+      </h3>
+    </div>
+  </div>
+  <div ng-show="info.user !== null">
+
+
+    <div class="row">
+      <div class="col-md-4">
+      <div class="form-group">
+        <label for="first_name" class="cols-sm-2 control-label">First Name: {{info.user.first_name}} </label>
+      </div>
+
+      <div class="form-group">
+        <label for="first_name" class="cols-sm-2 control-label">Last Name: {{info.user.last_name}} </label>
+      </div>
+
+      <div class="form-group">
+        <label for="first_name" class="cols-sm-2 control-label">Address: {{info.user.address}} </label>
+      </div>
+
+      <div class="form-group">
+        <label for="first_name" class="cols-sm-2 control-label">Phone : {{info.user.phone_number}} </label>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <menu-item menu-item="info.user.favorite_dish">
+    </div>
+
+    </div>
+  </div>
+</div>
