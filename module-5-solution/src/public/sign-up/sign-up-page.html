@@ -31,13 +31,13 @@
 			</div>
 
 			<div class="form-group">
-				<label for="address" class="cols-sm-2 control-label">Address</label>
+				<label for="email" class="cols-sm-2 control-label">Email address</label>
 				<div class="cols-sm-10">
 					<div class="input-group">
 						<span class="input-group-addon"></span>
-						<input type="text" class="form-control" name="address" id="address" ng-model="signup.user.address" placeholder="Enter your address" required/>
+						<input type="e-mail" class="form-control" name="email" id="email" ng-model="signup.user.email" placeholder="Enter your email address" required/>
 					</div>
-					<div class="alert alert-danger" ng-show="signUpForm.address.$error.required && signUpForm.address.$touched">
+					<div class="alert alert-danger" ng-show="signUpForm.email.$error.required && signUpForm.email.$touched">
 						<span>This field is required!</span>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 				<div class="cols-sm-10">
 					<div class="input-group">
 						<span class="input-group-addon"></span>
-						<input type="text" class="form-control" name="phone_number" id="phone_number" ng-model="signup.user.phone_number" placeholder="Enter your phone number" required/>
+						<input type="text" class="form-control" name="phone_number" id="phone_number"  pattern="(\d{3})-(\d{3})-(\d{4})" ng-model="signup.user.phone_number" placeholder="Enter your phone number" required/>
 					</div>
 					<div class="alert alert-danger" ng-show="signUpForm.prhone_number.$error.required && signUpForm.prhone_number.$touched">
 						<span>This field is required!</span>
